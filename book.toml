@@ -7,7 +7,6 @@ multilingual = false
 src = "src"
 
 [output.html]
-theme = "defaults"
 default-theme = "navy"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/codingdud/design-pattern"
