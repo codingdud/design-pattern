@@ -1,0 +1,60 @@
+# Structural Design Pattern : 
+
+> Patterns that deal with object composition and identify simple ways have relationships between different objects
+## Adapter
+ - **Allows objects with incompatible interfaces to work together by wrapping an object with an interface that the client expects.**
+
+```mermaid
+---
+config:
+  look: handDrawn
+  theme: redux
+  layout: elk
+---
+classDiagram
+direction BT
+    class OldPaymentSystem {
+	    +makePayment(amount: number) Object
+    }
+
+    class StripPaymentService {
+	    +chargeCard(cardNumber: number, amount: number, currency: string) Object
+    }
+
+    class ModernPaymentInterface {
+	    +paymentProcess(paymentDetails: Object) Object
+    }
+
+    class OldPaymentAdapter {
+	    +oldSystem: OldPaymentSystem
+	    +constructor()
+	    +paymentProcess(paymentDetails: Object) Object
+    }
+
+    class StripAdapter {
+	    +strip: StripPaymentService
+	    +constructor()
+	    +paymentProcess(paymentDetails: Object) Object
+    }
+
+    class PaymentProcess {
+	    -adapter: ModernPaymentInterface
+	    +constructor(adapter: ModernPaymentInterface)
+	    +process(paymentDetails: Object) Object
+    }
+
+	<<abstract>> ModernPaymentInterface
+
+	note for OldPaymentSystem "Legacy payment system\nwith different interface"
+	note for StripPaymentService "Third-party service\nwith incompatible interface"
+	note for ModernPaymentInterface "Target interface that\nclient expects"
+	note for OldPaymentAdapter "Adapter: Converts\nOldPaymentSystem to\nModernPaymentInterface"
+	note for StripAdapter "Adapter: Converts\nStripPaymentService to\nModernPaymentInterface"
+	note for PaymentProcess "Client: Works with\nModernPaymentInterface\nwithout knowing adaptees"
+
+    ModernPaymentInterface <|-- OldPaymentAdapter : implements
+    ModernPaymentInterface <|-- StripAdapter : implements
+    OldPaymentAdapter o-- OldPaymentSystem : adapts
+    StripAdapter o-- StripPaymentService : adapts
+    PaymentProcess o-- ModernPaymentInterface : uses
+```
