@@ -1,0 +1,2 @@
+Separation of Concerns (SoC) is a fundamental design principle in software engineering where you organize code by dividing a program into distinct sections, each handling a specific responsibility or "concern."
+code idea is each part in system focuse one thing.  This makes code easier to understand, maintain, test, and modify because changes to one concern don't ripple through unrelated parts of the system.

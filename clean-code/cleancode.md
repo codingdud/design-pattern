@@ -1,0 +1,3 @@
+# clean code 
+ - no dublication
+ - 

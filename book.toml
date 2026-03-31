@@ -1,0 +1,15 @@
+[book]
+title = "Design Patterns & Principles"
+authors = ["Animesh Kumar"]
+description = "A comprehensive guide to software design patterns and clean code principles"
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html]
+theme = "defaults"
+default-theme = "navy"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/codingdud/design-pattern"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/codingdud/design-pattern/edit/main/{path}"
