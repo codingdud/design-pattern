@@ -1,4 +1,4 @@
-//Dynamically adds behaviors or responsibilities to objects without modifying their structure.
+//attachnew behaviors or responsibilities to objects without modifying their structure. just adding wraper class to the original class and providing new functionalities
 class BasicCar{
     private descr:string;
     private costValue:number;

@@ -32,6 +32,7 @@ console.log(a === b); // true
 ## Factory
 
 A factory method creates instances based on input — the caller doesn't need to know the concrete class.
+Invoves Createing seperte factory that responsible for creating object
 
 ```typescript
 class VehicleFactory {
@@ -52,41 +53,59 @@ const car = VehicleFactory.create('car', 'Toyota', 'Corolla');
 
 ---
 
-## Builder
+## Abstract Factory
+it is  extention of Factory but it can deal with families of related obj 
+where we have abstract factory call the concretee factory that return actual obj
 
-Builder provides flexibility to construct complex objects step-by-step, supporting optional parts and different configurations.
+basical we add abstract layer to factory method so that we can create many diff type obj, still intrating with single factor function or calss
 
 ```typescript
-class ComputerBuilder {
-  private computer = new Computer();
-
-  addCPU(cpu: string): this {
-    this.computer.addPart('CPU', cpu);
-    return this;
-  }
-  addRAM(ram: string): this {
-    this.computer.addPart('RAM', ram);
-    return this;
-  }
-  addGPU(gpu: string): this {
-    this.computer.addPart('GPU', gpu);
-    return this;
-  }
-  build(): Computer {
-    return this.computer;
+// Abstract Factory — wraps around concrete factories
+class VehicleAbstractFactory {
+  static create(type: string, brand: string, model: string): Vehicle {
+    switch (type) {
+      case 'car':        return CarFactory.create(brand, model);
+      case 'truck':      return TruckFactory.create(brand, model);
+      case 'motorcycle': return MotorcycleFactory.create(brand, model);
+      default: throw new Error(`Unknown type: ${type}`);
+    }
   }
 }
 
-const gaming = new ComputerBuilder()
-  .addCPU('i9-13900K')
-  .addRAM('64GB DDR5')
-  .addGPU('RTX 4090')
-  .build();
+const car = VehicleAbstractFactory.create('car', 'Toyota', 'Corolla');
+```
+
+## Builder
+
+Builder provides flexibility and multi step-by-step obj creation, supporting different configurations.
+
+```typescript
+class User{
+  constructor(name){
+    this.name=name,
+    this.age=null,
+    this.weigth=null,
+    this.address=null,
+    this.genderr=null,
+  }
+  setAge(age){
+    this.age=age;
+    return this;
+  }
+  //....
+  build(){
+    if(!this) throw Error("Name Requiired");
+    return this;
+  }
+}
+const user=new User("animesh").setAge(6).build();
 ```
 
 **Use for:** query builders, HTTP request builders, test fixtures.
 
 ---
+
+## decorator
 
 ## Prototype
 

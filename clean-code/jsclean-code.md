@@ -1,0 +1,17 @@
+# js best practices
+- use let and const over var - block scolbed
+- decript and meaning full variable name
+- use `template literals` 
+- use destruction and construction 
+- use deafalt right to left
+- use array function lexicall binding of this predictable behaviour
+- use asyncronees code - more readable
+- modulues export and impor  - resuability , expose only what needed and import what need
+- short circuit {||,&& boolean,?? nullcolion} parmeter=>reteurn
+- use spread and rest operator - more readable and less code
+- use optional chaining - avoid error when accessing nested object properties
+- promise chaing reduce callback hell
+- *early reteurn*
+- avoid magic numbeer
+- composion over inhritance
+- encapsulation and abstraction
