@@ -24,9 +24,12 @@
 - [Structural Patterns](patterns/structural.md)
 - [Creational Patterns](patterns/creational.md)
 
-# Clean Code
 
-- [Clean Code Principles](clean-code/cleancode.md)
+# Clean Code
+* [Clean Code Principles](clean-code/cleancode.md)
+	* [Formatting & Syntax](clean-code/cleancode.md#formating-and-syntax)
+	* [Writing Clean Code](clean-code/cleancode.md#write-clean-code)
+	* [Folder Structure & Documentation](clean-code/cleancode.md#folder-structure)
 
 # Software Development
 - [Software Development](software-development.md)
