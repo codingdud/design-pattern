@@ -3,26 +3,30 @@
         "workspaceId": "ebeb58e8-613e-49e0-90ab-0cb8fb81923c"
     },
     "claudeCode.environmentVariables": [
-    {
-      "name": "CLAUDE_PLUGIN_DIR",
-      "value": "C:\\Users\\AnimeshKumar1\\.codemie\\claude-plugin"
-    },
-    {
-      "name": "ANTHROPIC_LOG",
-      "value": "debug"
-    },
-    {
-      "name": "ANTHROPIC_BASE_URL",
-      "value": "http://localhost:63620"
-    },
-    {
-      "name": "ANTHROPIC_AUTH_TOKEN",
-      "value": "dummy"
-    },
-    {
-      "name": "NO_PROXY",
-      "value": "localhost,127.0.0.1"
-    }
-  ],
+      {
+        "name": "CLAUDE_PLUGIN_DIR",
+        "value": "C:\\Users\\AnimeshKumar1\\.codemie\\claude-plugin"
+      },
+      {
+        "name": "ANTHROPIC_LOG",
+        "value": "debug"
+      },
+      {
+        "name": "ANTHROPIC_BASE_URL",
+        "value": "http://localhost:59733"
+      },
+      {
+        "name": "ANTHROPIC_AUTH_TOKEN",
+        "value": "dummy"
+      },
+      {
+        "name": "NO_PROXY",
+        "value": "localhost,127.0.0.1"
+      },
+      {
+        "name": "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS",
+        "value": "1"
+      }
+    ],
   "claudeCode.disableLoginPrompt": true
 }
