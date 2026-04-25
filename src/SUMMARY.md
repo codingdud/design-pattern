@@ -27,9 +27,8 @@
 
 # Clean Code
 - [Clean Code Principles](clean-code/cleancode.md)
-- [Formatting & Syntax](clean-code/cleancode.md#formating-and-syntax)
-- [Writing Clean Code](clean-code/cleancode.md#write-clean-code)
-- [Folder Structure & Documentation](clean-code/cleancode.md#folder-structure)
+- [code smell](clean-code/code-smell.md)
+- [JS clean code](clean-code/jsclean-code.md)
 
 # Software Development
 - [Software Development](software-development.md)
