@@ -8,6 +8,8 @@
 - [DRY — Don't Repeat Yourself](principles/dry.md)
 - [YAGNI — You Aren't Gonna Need It](principles/yagni.md)
 - [SoC — Separation of Concerns](principles/soc.md)
+- [FIRST Principles](principles/first.md)
+- [AAA Pattern](principles/aaa.md)
 
 # SOLID Principles
 
